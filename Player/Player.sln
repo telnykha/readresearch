@@ -4,12 +4,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Player", "Player\Player.vcxproj", "{495809ED-8219-48C6-8157-EFB0B3CD5C02}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8B0D0586-46EA-4F01-B391-150F2B2D9E48} = {8B0D0586-46EA-4F01-B391-150F2B2D9E48}
+		{E762D9A5-EFC5-4D8B-9ED6-61831D615883} = {E762D9A5-EFC5-4D8B-9ED6-61831D615883}
+		{505806D4-64FC-43A4-AD85-F1C94CBCE59A} = {505806D4-64FC-43A4-AD85-F1C94CBCE59A}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_heatmap", "..\..\..\heatmap\test_heatmap\test_heatmap.vcxproj", "{568136B8-6773-4A5B-B318-B389717BB50A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "awpipl2", "..\..\..\IPF\awpipl2\vc\vc2013\awpipl2.vcxproj", "{EEC6D9A5-396E-4388-BD84-193BEF1657BA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "awpipl2", "..\..\awpipl2\vc\vc2013\awpipl2.vcxproj", "{EEC6D9A5-396E-4388-BD84-193BEF1657BA}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "awpcvvideo", "..\..\..\IPF\cvvideo\module\awpcvvideo\awpcvvideo.vcxproj", "{8B0D0586-46EA-4F01-B391-150F2B2D9E48}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "awpcvvideo", "..\..\common\cvvideo\module\awpcvvideo\awpcvvideo.vcxproj", "{8B0D0586-46EA-4F01-B391-150F2B2D9E48}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "awplflib", "..\..\awplflib\vc\vc2013\awplflib.vcxproj", "{E762D9A5-EFC5-4D8B-9ED6-61831D615883}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyxml", "..\..\TinyXML\vc\vc2013\tinyxml_lib.vcxproj", "{505806D4-64FC-43A4-AD85-F1C94CBCE59A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +58,22 @@ Global
 		{8B0D0586-46EA-4F01-B391-150F2B2D9E48}.Release|Win32.Build.0 = Release|Win32
 		{8B0D0586-46EA-4F01-B391-150F2B2D9E48}.Release|x64.ActiveCfg = Release|x64
 		{8B0D0586-46EA-4F01-B391-150F2B2D9E48}.Release|x64.Build.0 = Release|x64
+		{E762D9A5-EFC5-4D8B-9ED6-61831D615883}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E762D9A5-EFC5-4D8B-9ED6-61831D615883}.Debug|Win32.Build.0 = Debug|Win32
+		{E762D9A5-EFC5-4D8B-9ED6-61831D615883}.Debug|x64.ActiveCfg = Debug|x64
+		{E762D9A5-EFC5-4D8B-9ED6-61831D615883}.Debug|x64.Build.0 = Debug|x64
+		{E762D9A5-EFC5-4D8B-9ED6-61831D615883}.Release|Win32.ActiveCfg = Release|Win32
+		{E762D9A5-EFC5-4D8B-9ED6-61831D615883}.Release|Win32.Build.0 = Release|Win32
+		{E762D9A5-EFC5-4D8B-9ED6-61831D615883}.Release|x64.ActiveCfg = Release|x64
+		{E762D9A5-EFC5-4D8B-9ED6-61831D615883}.Release|x64.Build.0 = Release|x64
+		{505806D4-64FC-43A4-AD85-F1C94CBCE59A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{505806D4-64FC-43A4-AD85-F1C94CBCE59A}.Debug|Win32.Build.0 = Debug|Win32
+		{505806D4-64FC-43A4-AD85-F1C94CBCE59A}.Debug|x64.ActiveCfg = Debug|x64
+		{505806D4-64FC-43A4-AD85-F1C94CBCE59A}.Debug|x64.Build.0 = Debug|x64
+		{505806D4-64FC-43A4-AD85-F1C94CBCE59A}.Release|Win32.ActiveCfg = Release|Win32
+		{505806D4-64FC-43A4-AD85-F1C94CBCE59A}.Release|Win32.Build.0 = Release|Win32
+		{505806D4-64FC-43A4-AD85-F1C94CBCE59A}.Release|x64.ActiveCfg = Release|x64
+		{505806D4-64FC-43A4-AD85-F1C94CBCE59A}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

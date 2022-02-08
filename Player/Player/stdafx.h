@@ -11,7 +11,9 @@
 #include <tchar.h>
 #include "opencv\cv.h"
 #include "opencv\highgui.h"
-#include "..\..\..\..\IPF\cvvideo\module\awpcvvideo\awpcvvideo.h"
+#include "..\..\..\..\IPF\common\cvvideo\module\awpcvvideo\awpcvvideo.h"
+#include "..\..\..\..\IPF\awplflib\include\_LF.h"
+
 
 
 //using std::string;
