@@ -11,6 +11,7 @@ extern "C"
 
 int main(int argc, char* argv[])
 {
+	if (argc < 3)return 2;
 	HCVVIDEO video;
 	TSCObjectDetector d;
 	HRESULT res = S_OK;
