@@ -20,14 +20,14 @@ int main(int argc, char* argv[])
 	const char _MODULE_[] = "";
 	awpRect rect;
 	awpImage* img = NULL;
-	video = awpcvConnect("C:\\4.mp4");
+	video = awpcvConnect(argv[1]);//"C:\\1.mp4"
 	if (awpcvQueryImagePos(video, &img, 0) != S_OK)return 1;
 	rect.bottom = img->sSizeY / 12;
 	rect.top = 1;//  10;
 	rect.left = 1;// ->sSizeX - 1;
 	rect.right = img->sSizeX / 12;// /*img->sSizeX/12*/100;
 	awpcvNumFrames(video, &num_frames);//(int)cvGetCaptureProperty(capture, CV_CAP_PROP_FRAME_COUNT);
-	d.LoadDetector("C:\\Users\\Авас yuri\\Documents\\IPF\\readresearch\\road.xml");
+	d.LoadDetector(argv[2]);//"C:\\Users\\Авас yuri\\Documents\\IPF\\readresearch\\road.xml"
 	frames = 0;
 	for (int j = 0; j < num_frames - 1; j++)
 	{
