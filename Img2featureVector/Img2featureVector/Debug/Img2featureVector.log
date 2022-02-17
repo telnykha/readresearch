@@ -1,8 +1,6 @@
-﻿Сборка начата 10.02.2022 18:50:44.
+﻿Сборка начата 10.02.2022 19:51:18.
      1>Проект "C:\Users\Авас yuri\Documents\IPF\readresearch\Img2featureVector\Img2featureVector\Img2featureVector.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Img2featureVector.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Img2featureVector.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Img2featureVector.cpp
          Img2featureVector.cpp
        Link:
@@ -12,10 +10,9 @@
          "C:\Users\Авас yuri\Documents\IPF\lib\Debug\awpipl2.lib"
          "C:\Users\Авас yuri\Documents\IPF\lib\Debug\tinyxml.lib"
          "C:\Users\Авас yuri\Documents\IPF\lib\Debug\awplflib.lib"
-     1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: библиотека по умолчанию "libcmtd.lib" противоречит использованию других библиотек; используйте параметр /NODEFAULTLIB:library
          Img2featureVector.vcxproj -> C:\Users\Авас yuri\Documents\IPF\readresearch\Img2featureVector\Debug\Img2featureVector.exe
      1>Сборка проекта "C:\Users\Авас yuri\Documents\IPF\readresearch\Img2featureVector\Img2featureVector\Img2featureVector.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:18.29
+Затраченное время: 00:00:12.54

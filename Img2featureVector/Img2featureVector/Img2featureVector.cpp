@@ -17,22 +17,31 @@ void tiles(char* argv[], int Levels, int sx, int sy, int wx, int wy, TLFObjectLi
 
 int main(int argc, char* argv[])
 {
-	if (argc < 10) return 2;
+	if (argc < 13) return 2;
 		char FName[60];
 		TLFImage img;
 		ofstream sink;
 		TLFObjectList list;
 		tiles(argv, atoi(argv[1]), 0, 0, 159, 89, list);
 		int Ncolumns = list.GetCount();
-		sink.open(argv[8]);
-		for (int VNumb = 1; VNumb <= atoi(argv[10]); VNumb++){
-			for (int ImgNum = 1; ImgNum <= atoi(argv[11]); ImgNum++){
+		sink.open(argv[9]);
+		for (int VNumb = 1; VNumb <= atoi(argv[11]); VNumb++){
+			for (int ImgNum = 1; ImgNum <= atoi(argv[12]); ImgNum++){
 				sink << VNumb << ";" << ImgNum << ";";
-				sprintf_s(FName, "%s\\%d_%d.awp",argv[9], VNumb, ImgNum);
+				sprintf_s(FName, "%s\\%d_%d.awp",argv[10], VNumb, ImgNum);
 				img.LoadFromFile(FName);
 				for (int Column = 0; Column < Ncolumns; Column++){
 					ILFFeature *f = (ILFFeature*)list.Get(Column);
-					sink << f->fCalcValue(&img) << ";";
+					if (strcmp(f->GetName(), "TLFColorSensor9Bit") == 0){
+						int temp = (int)f->fCalcValue(&img);
+						int r = temp & 7;
+						int g = ((temp & (7 << 3)) >> 3);
+						int b = ((temp & (7 << 6)) >> 6);
+						sink << r << ";";
+						sink << g << ";";
+						sink << b << ";";
+					}
+					else sink << f->fCalcValue(&img) << ";";
 				}
 				sink << endl;
 			}
@@ -67,6 +76,11 @@ void features(char* argv[], int sxbase, int sybase, int wbase, int hbase, TLFObj
 		TLFCFeature *f = new TLFCFeature(sxbase, sybase, wbase, hbase);
 		list.Add(f);
 	}
+	if (strcmp(argv[8], "1") == 0){
+		TLFColorSensor9Bit *f = new TLFColorSensor9Bit(sxbase, sybase, wbase, hbase);
+		list.Add(f);
+	}
+
 }
 void tiles(char* argv[], int Levels, int sx, int sy, int wx, int wy, TLFObjectList &list){
 	features(argv, sx, sy, wx, wy,list);
